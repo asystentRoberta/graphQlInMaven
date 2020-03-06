@@ -10,3 +10,7 @@ type Query{
 }
 
 #Name of query is important Resolver look at patterns.
+
+type Mutation{
+    createMovie(title: String, genre: String): NameIsNotImportant
+}

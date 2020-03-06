@@ -25,6 +25,11 @@ public class MovieService {
         return movieRepo.findAll().stream().limit(limitFilms).collect(Collectors.toList());
     }
 
+    public Movie save(String title, String genre) {
+
+        return movieRepo.save(new Movie(title, genre));
+    }
+
     @EventListener(ApplicationReadyEvent.class)
     public void createSomeObjectsInDataBase() {
 
