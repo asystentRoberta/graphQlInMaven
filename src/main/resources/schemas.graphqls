@@ -1,0 +1,12 @@
+type NameIsNotImportant {
+    id: ID!,
+    title: String,
+    genre: String
+}
+
+
+type Query{
+    getMovies(limit: Int): [NameIsNotImportant]
+}
+
+#Name of query is important Resolver look at patterns.
